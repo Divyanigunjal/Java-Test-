@@ -1,0 +1,48 @@
+package com.collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> al = new ArrayList<>();
+		al.add("Ram");
+		al.add("Sita");
+		al.add("Divyani");
+		al.add("Deepak");
+		al.add("Rita");
+		
+	// 1. Iterate through the ArrayList and print each string with its length.
+
+	for(String str : al)
+	{
+		System.out.println(str+ "length of elements are:  "+str.length());
+	}
+	
+	
+	//2. Remove strings from the ArrayList that have a length less than or equal to 3.
+
+	Iterator<String> iterator = al.iterator();
+	while(iterator.hasNext())
+	{
+		String str = iterator.next();
+		if(str.length()<=3)
+		{
+			iterator.remove();
+		}
+	}
+	
+	//3. Print the modified ArrayList.
+
+	for(String str : al)
+	{
+		System.out.println("Remaining Arraylist Elements are: "+al);
+	}
+		
+		
+	}
+
+}
